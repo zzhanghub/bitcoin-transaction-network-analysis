@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<script src="d3.v3.min.js"></script>
+<script src="jsnetworkx.js"></script>
+<script src="jquery.min.js"></script>
+<body>
+  <div class="graph" id="all"></div>
+  <script>
+    $.ajax({
+      url: "aaa.txt",
+      success: function (data, status) {
+
+        let text;
+        let a = [];
+        let w;
+        let G = new jsnx.DiGraph();
+
+        console.log(arguments);
+        text = data.split("\n");
+        // console.log(text)
+        // for(let i = 0; i < text.length; i++){
+        //   a.push(text[i]);
+        // }
+        // console.log(a);
+
+        for(let i = 0; i < text.length; i++){
+          w = text[i].split(" ");
+        }
+        console.log(w)
+        G.addEdgesFrom([[1,9], [9,1]]);
+        // G.addWeightedEdgesFrom([a]);
+
+
+        jsnx.draw(G, {
+        element: '#all', 
+        withLabels: true, 
+        nodeStyle: {
+            fill: function(d) { 
+                return d.data.color; 
+            }
+        }, 
+        labelStyle: {fill: 'white'},
+        stickyDrag: true
+        });
+
+
+      },
+      error: function (data, status) {
+        console.log(arguments);
+      }
+    });
+  </script>
+
+<div class="graph" id="track"></div>
+<script>
+  $.ajax({
+    url: "aaa.txt",
+    success: function (data, status) {
+
+      let text;
+      let a = []
+      let G = new jsnx.Graph();
+      G.addNode(1, { count: 12 });
+      G.addNode(2, { count: 8 });
+      G.addNode(3, { count: 15 });
+      G.addEdgesFrom([[1, 2], [2, 3]]);
+
+      jsnx.draw(G, {
+        element: '#track',
+        withLabels: true,
+        nodeAttr: {
+          r: function (d) {
+            // `d` has the properties `node`, `data` and `G`
+            return d.data.count;
+          }
+        }
+      });
+
+      console.log(arguments);
+      text = data.split("\n");
+      console.log(text)
+      for(let i = 0; i < text.length; i++){
+        a.push(Number(text[i]));
+      }
+      console.log(a);
+    },
+    error: function (data, status) {
+      console.log(arguments);
+    }
+  });
+</script>
+
+</body>
+
+</html>
