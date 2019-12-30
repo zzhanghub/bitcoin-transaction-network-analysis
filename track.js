@@ -11,7 +11,7 @@ $.ajax({
     let iedge;
     for(let i = 0; i < text.length-1; i++){
       let w = text[i].split(" ");
-      edges.push([Number(w[0]), Number(w[1]), Number(w[2])]);
+      edges.push([Number(w[0]), Number(w[1]), {edge_labels: w[2]}]);
     }
     console.log(iedge)
     G.addNodesFrom([[edges[0][0],{color: '#008A00'}]]);
@@ -19,6 +19,7 @@ $.ajax({
     jsnx.draw(G, {
     element: '#track', 
     withLabels: true, 
+    withEdgeLabels:true,
     nodeStyle: {
         fill: function(d) { 
             return d.data.color; 
