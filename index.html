@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>比特图谱</title>
+  <style>
+    .bs-docs-header,
+    .bs-docs-masthead {
+      color: #cdbfe3;
+      text-align: center;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+      background-color: #8e71be;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#563d7c), to(#6f5499));
+      background-image: -webkit-linear-gradient(top, #563d7c 0, #6f5499 100%);
+      background-image: -o-linear-gradient(top, #563d7c 0, #6f5499 100%);
+      background-image: linear-gradient(to bottom, #563d7c 0, #6f5499 100%);
+      /* filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0); */
+      background-repeat: repeat-x
+    }
+
+    .divsize {
+      width: 1000;
+      height: 500
+    }
+  </style>
+</head>
+<script src="d3.v3.min.js"></script>
+<script src="jsnetworkx.js"></script>
+<script src="jquery.min.js"></script>
+
+<body>
+  <div class="container">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="jumbotron">
+          <h1>
+            比特币图谱分析（计算机网络）
+          </h1>
+          <p>
+            <!-- 比特币交易的图谱、交易资金的流向、图谱聚类别和图相似性等分析。 -->
+          </p>
+          <p>
+            <br />
+            张 钊: 2120190468 &nbsp 张长彬：2120190467
+          </p>
+          <p>
+            韩 琦: 2120190468 &nbsp 刘志昂：2120190467
+          </p>
+        </div>
+
+        <!-- <div class="graph" id="track"></div>
+        <script src="track.js"></script> -->
+
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">交易图谱</h4>
+            <p class="card-text">Some example text. Some example text.</p>
+            <a class="btn btn-primary btn-large" href="all.html">Learn more</a>
+          </div>
+        </div>
+        <br />
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">资金追溯</h4>
+            <p class="card-text">Some example text. Some example text.</p>
+            <a class="btn btn-primary btn-large" href="#">Learn more</a>
+          </div>
+        </div>
+        <br />
+
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">聚类分析</h4>
+            <p class="card-text">Some example text. Some example text.</p>
+            <a class="btn btn-primary btn-large" href="#">Learn more</a>
+          </div>
+        </div>
+        <br />
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">相似分析</h4>
+            <p class="card-text">Some example text. Some example text.</p>
+            <a class="btn btn-primary btn-large" href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"
+    integrity="sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9+4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb"
+    crossorigin="anonymous"></script>
+  <script src="./bootstrap-4.3.1-dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
