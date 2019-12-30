@@ -1,11 +1,10 @@
 $.ajax({
-  url: "graph_100.txt",
+  url: "/data/graph_mid.txt",
   success: function (data, status) {
 
     let text;
-    let a = [];
     let edges = [];
-    let G = new jsnx.DiGraph();
+    let G = new jsnx.MultiDiGraph;
 
     console.log(arguments);
     text = data.split("\n");
@@ -22,14 +21,22 @@ $.ajax({
     nodeStyle: {
         fill: function(d) { 
             return d.data.color; 
-        }
+        },
     }, 
-    labelStyle: {fill: 'white'},
+    nodeAttr: {
+      r: 2,
+    },
+    labelStyle: {
+      fill: 'white',
+    },
+    // edge_style: { 
+    //   'stroke-width': 0.1
+    // },
+    with_edge_labels: true,
     stickyDrag: true,
     with: 1000,
-    height: 500
+    height: 1000
     });
-
   },
   error: function (data, status) {
     console.log(arguments);
