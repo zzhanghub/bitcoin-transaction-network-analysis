@@ -1,5 +1,5 @@
 $.ajax({
-  url: "/data/graph_mid.txt",
+  url: "/data/retrospect_res.txt",
   success: function (data, status) {
 
     let text;
@@ -14,17 +14,18 @@ $.ajax({
       edges.push([Number(w[0]), Number(w[1]), Number(w[2])]);
     }
     console.log(iedge)
+    G.addNodesFrom([[edges[0][0],{color: '#008A00'}]]);
     G.addEdgesFrom(edges);
     jsnx.draw(G, {
     element: '#track', 
-    withLabels: false, 
+    withLabels: true, 
     nodeStyle: {
         fill: function(d) { 
             return d.data.color; 
         },
     }, 
     nodeAttr: {
-      r: 2,
+      r: 12,
     },
     labelStyle: {
       fill: 'white',
