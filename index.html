@@ -1,106 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.min.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>比特图谱</title>
-  <style>
-    .bs-docs-header,
-    .bs-docs-masthead {
-      color: #cdbfe3;
-      text-align: center;
-      text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
-      background-color: #8e71be;
-      background-image: -webkit-gradient(linear, left top, left bottom, from(#563d7c), to(#6f5499));
-      background-image: -webkit-linear-gradient(top, #563d7c 0, #6f5499 100%);
-      background-image: -o-linear-gradient(top, #563d7c 0, #6f5499 100%);
-      background-image: linear-gradient(to bottom, #563d7c 0, #6f5499 100%);
-      /* filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0); */
-      background-repeat: repeat-x
-    }
+	<title>VILA</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    .divsize {
-      width: 1000;
-      height: 500
-    }
-  </style>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		.vspace-top {
+			margin-top: 30px;
+		}
+
+		.cardhead-bg {
+			/* background: url("./img/color.png") no-repeat center; */
+			background-color: rgb(255, 255, 255);
+			/* background-size: 100% 100%; */
+		}
+
+		.jum-shadow {
+			-moz-box-shadow: 2px 2px 6px #9C9C9C;
+			-webkit-box-shadow: 2px 2px 6px #9C9C9C;
+			box-shadow: 2px 2px 6px #9C9C9C;
+
+		}
+
+		.jumbotron {
+			background-image: url("./img/material/Robot.png");
+			/* background-color: rgb(255, 255, 255); */
+			background-repeat: no-repeat;
+			/* background-size:  15% 95%; */
+			/* background-position:bottom right; */
+			background-position: 70% 100%;
+		}
+	</style>
 </head>
 <script src="d3.v3.min.js"></script>
 <script src="jsnetworkx.js"></script>
 <script src="jquery.min.js"></script>
 
 <body>
-  <div class="container">
-    <div class="row-fluid">
-      <div class="span12">
-        <div class="jumbotron">
-          <h1>
-            比特币图谱分析（计算机网络）
-          </h1>
-          <p>
-            <!-- 比特币交易的图谱、交易资金的流向、图谱聚类别和图相似性等分析。 -->
-          </p>
-          <p>
-            <br />
-            张 钊: 2120190468 &nbsp 张长彬：2120190467
-          </p>
-          <p>
-            韩 琦: 2120190468 &nbsp 刘志昂：2120190467
-          </p>
-        </div>
 
-        <!-- <div class="graph" id="track"></div>
-        <script src="track.js"></script> -->
-
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">交易图谱</h4>
-            <p class="card-text">Some example text. Some example text.</p>
-            <a class="btn btn-primary btn-large" href="all.html">Learn more</a>
-          </div>
-        </div>
-        <br />
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">资金追溯</h4>
-            <p class="card-text">Some example text. Some example text.</p>
-            <a class="btn btn-primary btn-large" href="#">Learn more</a>
-          </div>
-        </div>
-        <br />
-
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">聚类分析</h4>
-            <p class="card-text">Some example text. Some example text.</p>
-            <a class="btn btn-primary btn-large" href="#">Learn more</a>
-          </div>
-        </div>
-        <br />
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">相似分析</h4>
-            <p class="card-text">Some example text. Some example text.</p>
-            <a class="btn btn-primary btn-large" href="#">Learn more</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="jumbotron">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h1>
+						比特币交易图谱
+					</h1>
+					<p>
+						<br />
+						张 钊: 2120190468 &nbsp 张长彬：2120190467
+					</p>
+					<p>
+						韩 琦: 2120190468 &nbsp 刘志昂：2120190467
+					</p>
+					<!-- <p>
+						<a class="btn btn-primary btn-large" href="./publications.html">Publications</a>
+					</p> -->
+				</div>
+			</div>
+		</div>
+	</div>
 
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"
-    integrity="sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9+4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb"
-    crossorigin="anonymous"></script>
-  <script src="./bootstrap-4.3.1-dist/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+	<!-- Cards -->
+	<div class="container">
+		<h1 class="my-4">研究内容</h1>
+		<div class="row">
+			<div class="col-lg-3 mb-3">
+				<div class="card h-100">
+					<!-- <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a> -->
+					<div class="card-body">
+						<h4 class="card-title">
+							<a href="all.html">交易图谱</a>
+						</h4>
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+							aspernatur eum
+							quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in,
+							nesciunt, illum
+							tempora ex quae? Nihil, dolorem!</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 mb-3">
+				<div class="card h-100">
+					<!-- <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a> -->
+					<div class="card-body">
+						<h4 class="card-title">
+							<a href="#">资金追溯</a>
+						</h4>
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+							aspernatur eum
+							quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in,
+							nesciunt, illum
+							tempora ex quae? Nihil, dolorem!</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 mb-3">
+				<div class="card h-100">
+					<!-- <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a> -->
+					<div class="card-body">
+						<h4 class="card-title">
+							<a href="#">聚类分析</a>
+						</h4>
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+							aspernatur eum
+							quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in,
+							nesciunt, illum
+							tempora ex quae? Nihil, dolorem!</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-3 mb-3">
+				<div class="card h-100">
+					<!-- <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a> -->
+					<div class="card-body">
+						<h4 class="card-title">
+							<a href="#">相似分析</a>
+						</h4>
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+							aspernatur eum
+							quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in,
+							nesciunt, illum
+							tempora ex quae? Nihil, dolorem!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.row -->
+
+
+		<div class="row vspace-top">
+			<div class="col-lg-6">
+				<h2>一些总结</h2>
+				<p>The Modern Business template by Start Bootstrap includes:</p>
+				<ul>
+					<li>
+						<strong>Bootstrap v4</strong>
+					</li>
+					<li>jQuery</li>
+					<li>Font Awesome</li>
+					<li>Working contact form with validation</li>
+					<li>Unstyled page elements for easy customization</li>
+				</ul>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id
+					reprehenderit,
+					quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus
+					unde.</p>
+			</div>
+			<div class="col-lg-6">
+				<div class="graph" id="show"></div>
+				<script src="show.js"></script>
+			</div>
+		</div>
+
+
+		<hr>
+
+
+	</div>
+
+
+
+
+	</div>
+
+
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
 </body>
 
 </html>

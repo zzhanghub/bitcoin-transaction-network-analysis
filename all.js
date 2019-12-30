@@ -1,5 +1,5 @@
 $.ajax({
-  url: "graph_100.txt",
+  url: "/data/graph_100.txt",
   success: function (data, status) {
 
     let text;
