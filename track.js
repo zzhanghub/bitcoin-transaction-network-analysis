@@ -9,7 +9,7 @@ $.ajax({
     console.log(arguments);
     text = data.split("\n");
     let iedge;
-    for(let i = 0; i < text.length; i++){
+    for(let i = 0; i < text.length-1; i++){
       let w = text[i].split(" ");
       edges.push([Number(w[0]), Number(w[1]), Number(w[2])]);
     }
