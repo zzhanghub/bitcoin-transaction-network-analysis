@@ -1,5 +1,5 @@
 $.ajax({
-  url: "/data/retrospect_res.txt",
+  url: "/data/similarity.txt",
   success: function (data, status) {
 
     let text;
@@ -11,13 +11,13 @@ $.ajax({
     let iedge;
     for(let i = 0; i < text.length-1; i++){
       let w = text[i].split(" ");
-      edges.push([Number(w[0]), Number(w[1]), {weight: w[2]}]);
+      edges.push([Number(w[0]), Number(w[1]), {edge_labels: w[2]}]);
     }
     console.log(iedge)
     G.addNodesFrom([[edges[0][0],{color: '#008A00'}]]);
     G.addEdgesFrom(edges);
     jsnx.draw(G, {
-    element: '#track', 
+    element: '#similarity', 
     withLabels: true, 
     withEdgeLabels:true,
     nodeStyle: {
@@ -34,7 +34,7 @@ $.ajax({
     // edge_style: { 
     //   'stroke-width': 0.1
     // },
-    // with_edge_labels: true,
+    with_edge_labels: true,
     stickyDrag: true,
     with: 1000,
     height: 1000
