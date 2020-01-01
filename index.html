@@ -57,7 +57,7 @@
                         张 钊: 2120190468 &nbsp 张长彬：2120190467
                     </p>
                     <p>
-                        韩 琦: 2120190468 &nbsp 刘志昂：2120190467
+                        韩 琦: 2120190459 &nbsp 刘志昂：2120190464
                     </p>
                     <p>
                         <br />
@@ -83,11 +83,10 @@
                         <h4 class="card-title">
                             <a href="all.html">交易图谱</a>
                         </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
-                            aspernatur eum
-                            quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in,
-                            nesciunt, illum
-                            tempora ex quae? Nihil, dolorem!</p>
+                        <p class="card-text"> 
+                            我们利用爬取的最新数据，分析了最近50个block的拓扑结构，由用户的账户为结点，交易额为有向边构成了拓扑图。
+                            用户可以指定需要了解的block，我们的软件可以自动返回其拓扑结构，帮助用户分析交易现象。
+                        </p>
                     </div>
                 </div>
             </div>
@@ -98,11 +97,10 @@
                         <h4 class="card-title">
                             <a href="track.html">资金追溯</a>
                         </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
-                            aspernatur eum
-                            quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in,
-                            nesciunt, illum
-                            tempora ex quae? Nihil, dolorem!</p>
+                        <p class="card-text">
+                            我们在100个block中追溯了指定结点的资金流向，并使用动态图简明地可视化出了资金是如何在各个结点中流动的。
+                        
+                        </p>
                     </div>
                 </div>
             </div>
@@ -113,11 +111,10 @@
                         <h4 class="card-title">
                             <a href="http://10.134.8.211:6006">聚类分析</a>
                         </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
-                            aspernatur eum
-                            quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in,
-                            nesciunt, illum
-                            tempora ex quae? Nihil, dolorem!</p>
+                        <p class="card-text">
+                            为了探究不同用户在交易图谱中的特性，我们使用聚类分析可视化出了不同用户的分布。具体地，首先构建出交易图谱，再使用<a href="LINE.html">LINE算法</a>，
+                            将每个结点（用户）嵌入到128维度的空间，之后对每个结点对应的特征向量降维分析，并使用多种算法聚类。聚类结果展示不同用户在交易网络中，交易行为的可区分性，为后续的研究提供新的思路。
+                        </p>
                     </div>
                 </div>
             </div>
@@ -129,11 +126,10 @@
                         <h4 class="card-title">
                             <a href="similarity.html">相似分析</a>
                         </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
-                            aspernatur eum
-                            quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in,
-                            nesciunt, illum
-                            tempora ex quae? Nihil, dolorem!</p>
+                        <p class="card-text">
+                            为了探究不同block交易图谱拓扑结构之间的相似性，我们首先对每个结点进行编码，然后使用<a href="graph_sim.html">一种图结构相似性分析算法</a>计算不同图之间的相似性。我们发现
+                            连续时间的块交易拓扑结构，具有很高的相似度，表明比特币网络中的交易行为呈现规律性分布。
+                        </p>
                     </div>
                 </div>
             </div>
@@ -143,21 +139,19 @@
 
         <div class="row vspace-top">
             <div class="col-lg-6">
-                <h2>一些总结</h2>
-                <p>The Modern Business template by Start Bootstrap includes:</p>
+                <h2>总结</h2>
+                <p>本次课程作业主要工作如下:</p>
                 <ul>
                     <li>
-                        <strong>我什么都不知道</strong>
+                        <strong>获取比特币交易网络数据</strong>
                     </li>
-                    <li>我不知道我不知道我不知道</li>
-                    <li>真不知道真不知道</li>
-                    <li>我只是路过</li>
-                    <li>别问了别问了别问了别问了别问了</li>
+                    <li><strong>项目网站制作</strong></li>
+                    <li><strong>可视化交易图谱</strong></li>
+                    <li><strong>在任意时间内，追溯资金流向</strong></li>
+                    <li><strong>比特币交易信息的聚类分析</strong></li>
+                    <li><strong>相邻时间范围内，交易网络拓扑结构相似性分析</strong></li>
                 </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id
-                    reprehenderit,
-                    quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus
-                    unde.</p>
+                <p></p>
             </div>
             <div class="col-lg-6">
                 <div class="graph" id="show"></div>
