@@ -1,6 +1,6 @@
 import numpy as np 
 import networkx as nx
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from networkx.drawing.nx_agraph import write_dot, graphviz_layout
 graph = {}
 
